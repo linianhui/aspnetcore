@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <AssemblyName>Dotnet.Watch.Run</AssemblyName>
     <RootNamespace>Dotnet.Watch.Run</RootNamespace>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,5 +14,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
   </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <MakeDir Directories="_log" Condition="!Exists('_log')" />
+  </Target>
 
 </Project>
