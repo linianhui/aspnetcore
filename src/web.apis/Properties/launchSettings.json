@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "web.apis.docs": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "launchUrl": "api-docs",
+      "applicationUrl": "http://localhost:9002/"
+    }
+  }
+}
