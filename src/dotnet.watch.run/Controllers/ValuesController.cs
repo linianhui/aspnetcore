@@ -13,8 +13,19 @@ namespace Dotnet.Watch.Run.Controllers
             return new
             {
                 _self = currentUrl,
-                value = "blackheart"
+                value = "blackheart",
+                api_docs = currentUrl + "api-docs"
             };
+        }
+
+        [HttpPost]
+        public void Post([FromBody]string value)
+        {
+        }
+
+        [HttpPut("{id}")]
+        public void Put(int id, [FromBody]string value)
+        {
         }
     }
 }
