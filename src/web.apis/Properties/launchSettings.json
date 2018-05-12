@@ -6,7 +6,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "launchUrl": "api-docs",
+      "launchUrl": ".docs",
       "applicationUrl": "http://localhost:9002/"
     }
   }

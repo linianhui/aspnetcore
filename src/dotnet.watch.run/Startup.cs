@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using Web.Apis.Extensions;
 
 namespace Dotnet.Watch.Run
 {
@@ -9,14 +8,14 @@ namespace Dotnet.Watch.Run
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddApiDoc("api-docs");
+            services.AddApiDocs();
             services.AddMvc();
         }
 
         public void Configure(IApplicationBuilder app)
         {
             app.UseDeveloperExceptionPage();
-            app.UseApiDoc();
+            app.UseApiDocs(".docs");
             app.UseMvc();
         }
     }
