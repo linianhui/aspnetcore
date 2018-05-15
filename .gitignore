@@ -273,10 +273,6 @@ paket-files/
 __pycache__/
 *.pyc
 
-# Cake - Uncomment if you are using it
-# tools/**
-# !tools/packages.config
-
 # Telerik's JustMock configuration file
 *.jmconfig
 
@@ -289,4 +285,6 @@ __pycache__/
 tools/*
 !tools/nuget.exe
 !tools/packages.config
+
+.DS_Store
 
