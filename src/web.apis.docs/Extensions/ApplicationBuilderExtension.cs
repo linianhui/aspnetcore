@@ -10,8 +10,6 @@ namespace Microsoft.AspNetCore.Builder
         /// <summary>
         /// 启用API文档和文档UI
         /// </summary>
-        /// <param name="this"></param>
-        /// <param name="routePrefix">路由前缀</param>
         public static void UseApiDocs(this IApplicationBuilder @this, string docs1, string docs2)
         {
             var apiSchemePath = "/.docs/api-scheme.json";
