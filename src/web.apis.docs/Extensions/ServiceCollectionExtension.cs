@@ -18,7 +18,12 @@ namespace Microsoft.Extensions.DependencyInjection
         {
             @this.AddSwaggerGen(_ =>
             {
-                _.SwaggerDoc("api",  new Info { Title="API Docs"});
+                _.SwaggerDoc("api", new Info
+                {
+                    Title = "API Docs",
+                    Version = "V1"
+                });
+
                 foreach (var filePath in GetXmlCommentFilePaths())
                 {
                     _.IncludeXmlComments(filePath);
@@ -28,7 +33,7 @@ namespace Microsoft.Extensions.DependencyInjection
 
         private static IEnumerable<string> GetXmlCommentFilePaths()
         {
-            var binPath = Environment.CurrentDirectory;
+            var binPath = AppContext.BaseDirectory;
             return Directory.GetFiles(binPath, "*.xml");
         }
     }

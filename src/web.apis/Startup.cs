@@ -14,7 +14,7 @@ namespace Web.Apis
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseDeveloperExceptionPage();
-            app.UseApiDocs(".docs");
+            app.UseApiDocs(".docs",".docs2");
             app.UseMvc();
         }
     }
