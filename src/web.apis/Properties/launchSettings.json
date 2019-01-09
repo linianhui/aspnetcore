@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "web.apis.docs": {
+    "web.apis": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

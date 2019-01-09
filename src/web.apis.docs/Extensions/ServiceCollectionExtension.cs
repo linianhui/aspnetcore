@@ -1,6 +1,6 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
-using Microsoft.Extensions.PlatformAbstractions;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace Microsoft.Extensions.DependencyInjection
@@ -28,7 +28,7 @@ namespace Microsoft.Extensions.DependencyInjection
 
         private static IEnumerable<string> GetXmlCommentFilePaths()
         {
-            var binPath = PlatformServices.Default.Application.ApplicationBasePath;
+            var binPath = Environment.CurrentDirectory;
             return Directory.GetFiles(binPath, "*.xml");
         }
     }
