@@ -14,7 +14,8 @@ namespace Dotnet.Watch.Run.Controllers
             {
                 _self = currentUrl,
                 value = "blackheart",
-                api_docs = currentUrl + ".docs"
+                api_docs1 = currentUrl + ".docs1",
+                api_docs2 = currentUrl + ".docs2"
             };
         }
 

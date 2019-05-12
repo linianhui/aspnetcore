@@ -14,7 +14,7 @@ namespace Dotnet.Watch.Run
         public void Configure(IApplicationBuilder app)
         {
             app.UseDeveloperExceptionPage();
-            app.UseApiDocs(".docs");
+            app.UseApiDocs(".docs1", ".docs2");
             app.UseMvc();
         }
     }
