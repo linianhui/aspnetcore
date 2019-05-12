@@ -6,7 +6,7 @@ var target = Argument("target", "default");
 
 var rootPath = "./";
 var solution = rootPath + "aspnetcore.example.sln";
-var srcProjectPath  = rootPath + "src/";
+var srcProjectPath  = rootPath + "1-src/";
 
 var websites = new []{
     new {

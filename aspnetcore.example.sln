@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet.watch.run", "src\dotnet.watch.run\dotnet.watch.run.csproj", "{9F4FF920-9B88-44BB-B9AB-8CC5B382A68A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet.watch.run", "1-src\dotnet.watch.run\dotnet.watch.run.csproj", "{9F4FF920-9B88-44BB-B9AB-8CC5B382A68A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web.apis.docs", "src\web.apis.docs\web.apis.docs.csproj", "{AD4723C4-675B-4153-8397-C6E0458572E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web.apis.docs", "1-src\web.apis.docs\web.apis.docs.csproj", "{AD4723C4-675B-4153-8397-C6E0458572E1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web.apis", "src\web.apis\web.apis.csproj", "{52F88A45-6028-4666-9184-3DAD3188BE75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web.apis", "1-src\web.apis\web.apis.csproj", "{52F88A45-6028-4666-9184-3DAD3188BE75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

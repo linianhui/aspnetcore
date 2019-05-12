@@ -3,7 +3,7 @@ version: '3.6'
 services:
   web-apis:
     build:
-      context: ./src/
+      context: ./1-src/
       dockerfile: web.apis.dockerfile
     ports:
       - '9002:80'
