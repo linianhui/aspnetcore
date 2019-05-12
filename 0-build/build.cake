@@ -1,6 +1,8 @@
-#addin nuget:?package=cake.iis&version=0.3.0
-#addin nuget:?package=cake.hosts&version=1.1.0
-#addin nuget:?package=cake.powershell&version=0.4.5
+#addin Microsoft.Win32.Registry&version=4.0.0.0
+#addin System.Reflection.TypeExtensions&version=4.1.0.0
+#addin nuget:?package=cake.iis&version=0.4.2
+#addin nuget:?package=cake.hosts&version=1.5.1
+#addin nuget:?package=cake.powershell&version=0.4.7
 
 var target = Argument("target", "default");
 
@@ -35,8 +37,8 @@ Task("deploy-iis")
         {
             Name                  = website.host,
             IdentityType          = IdentityType.LocalSystem,
-            MaxProcesses          = 1,
-            ManagedRuntimeVersion = "v4.0"
+            MaxProcesses          = 8,
+            ManagedRuntimeVersion = ""
         }
     });
 });
