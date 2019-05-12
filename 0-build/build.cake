@@ -4,7 +4,7 @@
 
 var target = Argument("target", "default");
 
-var rootPath = "./";
+var rootPath = "../";
 var solution = rootPath + "aspnetcore.example.sln";
 var srcProjectPath  = rootPath + "1-src/";
 

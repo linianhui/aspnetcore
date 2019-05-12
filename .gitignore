@@ -282,9 +282,9 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 
-tools/*
-!tools/nuget.exe
-!tools/packages.config
+0-build/tools/*
+!0-build/tools/nuget.exe
+!0-build/tools/packages.config
 
 .DS_Store
 
