@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using System.IO;
+using Microsoft.Extensions.Hosting;
 
 namespace Web.Apis
 {
@@ -9,27 +9,21 @@ namespace Web.Apis
     /// </summary>
     public class Program
     {
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="args"></param>
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(UseStartup)
+                .Build()
+                .Run();
         }
 
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="args"></param>
-        /// <returns></returns>
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .CaptureStartupErrors(true)
+        private static void UseStartup(IWebHostBuilder web)
+        {
+            web.CaptureStartupErrors(true)
                 .UseSetting(WebHostDefaults.DetailedErrorsKey, "true")
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
-                .UseStartup<Startup>()
-                .Build();
+                .UseStartup<Startup>();
+        }
     }
 }

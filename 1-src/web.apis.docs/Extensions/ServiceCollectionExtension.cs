@@ -1,7 +1,7 @@
-using Swashbuckle.AspNetCore.Swagger;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Microsoft.OpenApi.Models;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -18,7 +18,7 @@ namespace Microsoft.Extensions.DependencyInjection
         {
             @this.AddSwaggerGen(_ =>
             {
-                _.SwaggerDoc("api", new Info
+                _.SwaggerDoc("api", new OpenApiInfo
                 {
                     Title = "API Docs",
                     Version = "V1"

@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using System.IO;
+using Microsoft.Extensions.Hosting;
 
 namespace Dotnet.Watch.Run
 {
@@ -8,16 +8,19 @@ namespace Dotnet.Watch.Run
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(UseStartup)
+                .Build()
+                .Run();
         }
 
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .CaptureStartupErrors(true)
-                .UseSetting(WebHostDefaults.DetailedErrorsKey, "true")
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseIISIntegration()
-                .UseStartup<Startup>()
-                .Build();
+        private static void UseStartup(IWebHostBuilder web)
+        {
+            web.CaptureStartupErrors(true)
+               .UseSetting(WebHostDefaults.DetailedErrorsKey, "true")
+               .UseContentRoot(Directory.GetCurrentDirectory())
+               .UseIISIntegration()
+               .UseStartup<Startup>();
+        }
     }
 }

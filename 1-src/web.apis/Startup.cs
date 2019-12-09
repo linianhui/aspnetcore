@@ -15,7 +15,8 @@ namespace Web.Apis
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddApiDocs();
-            services.AddMvc();
+            services.AddRouting();
+            services.AddControllers();
         }
 
         /// <summary>
@@ -26,7 +27,8 @@ namespace Web.Apis
         {
             app.UseDeveloperExceptionPage();
             app.UseApiDocs(".docs1", ".docs2");
-            app.UseMvc();
+            app.UseRouting();
+            app.UseEndpoints(_ => _.MapDefaultControllerRoute());
         }
     }
 }

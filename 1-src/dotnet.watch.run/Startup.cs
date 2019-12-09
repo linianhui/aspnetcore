@@ -8,14 +8,16 @@ namespace Dotnet.Watch.Run
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddApiDocs();
-            services.AddMvc();
+            services.AddRouting();
+            services.AddControllers();
         }
 
         public void Configure(IApplicationBuilder app)
         {
             app.UseDeveloperExceptionPage();
             app.UseApiDocs(".docs1", ".docs2");
-            app.UseMvc();
+            app.UseRouting();
+            app.UseEndpoints(_ => _.MapDefaultControllerRoute());
         }
     }
 }
