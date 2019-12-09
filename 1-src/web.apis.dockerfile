@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.2-sdk-alpine AS builder
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-alpine AS builder
 
 COPY . /src
 
@@ -8,7 +8,7 @@ RUN dotnet publish ./web.apis/web.apis.csproj --output /publish
 
 
 
-FROM microsoft/dotnet:2.2.0-aspnetcore-runtime-alpine
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-alpine
 
 COPY --from=builder /publish /app
 
