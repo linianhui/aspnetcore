@@ -1,4 +1,4 @@
-AspNetCore 2 Example
+Asp.Net Core 3.1 Example
 
 
 # docker-compose.yml (docker platform)
