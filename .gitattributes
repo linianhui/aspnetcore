@@ -1,3 +1,4 @@
+*                   text=auto
 *.7z                binary
 *.XRM-MS            binary
 *.adoc              text eol=lf
