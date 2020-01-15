@@ -1,4 +1,4 @@
-﻿namespace Web.OAuth2.Resources.Apis
+namespace Web.OAuth2.Resources.Apis
 {
     /// <summary>
     /// 图书

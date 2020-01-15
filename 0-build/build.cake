@@ -19,7 +19,7 @@ var websites = new []{
 
 Task("deploy-iis")
     .Description("部署到iis")
-    .DoesForEach(websites, (website) => 
+    .DoesForEach(websites, (website) =>
 {
     AddHostsRecord("127.0.0.1", website.host);
 
